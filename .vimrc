@@ -13,6 +13,8 @@ Plugin 'tpope/vim-commentary'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'chilicuil/vim-sml-coursera'
+Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
 
 call vundle#end()
 filetype plugin indent on 
@@ -25,6 +27,9 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
+"key mapping for tagbar
+map <C-t> :TagbarToggle<CR>
+
 let mapleader = "\<Space>"
 filetype plugin indent on 
 syntax enable
@@ -33,5 +38,5 @@ set number
 set tabstop=4
 set shiftwidth=4
 set noexpandtab
-set background=dark
+"set background=dark
 colorscheme solarized
