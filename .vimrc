@@ -21,6 +21,7 @@ filetype plugin indent on
 
 "remap the escape key to jk 
 inoremap jk <ESC>
+
 "change the key mapping for handlng splits
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
@@ -29,6 +30,9 @@ noremap <C-l> <C-w>l
 
 "key mapping for tagbar
 map <C-t> :TagbarToggle<CR>
+
+"key mapping to toggle NERDtree 
+nmap <C-d> :NERDTreeToggle<CR>
 
 let mapleader = "\<Space>"
 filetype plugin indent on 
