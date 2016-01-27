@@ -15,6 +15,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'chilicuil/vim-sml-coursera'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
+"this allows navigation between vim and tmux splits
+Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
 filetype plugin indent on 
