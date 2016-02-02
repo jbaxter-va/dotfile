@@ -15,11 +15,18 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'chilicuil/vim-sml-coursera'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
-"this allows navigation between vim and tmux splits
-Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 filetype plugin indent on 
+
+
+"Make airline bar always appear
+set laststatus=2
+
+"change airline theme to match
+let g:airline_theme='solarized'
 
 "remap the escape key to jk 
 inoremap jk <ESC>
