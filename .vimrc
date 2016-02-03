@@ -27,7 +27,11 @@ set laststatus=2
 
 "change airline theme to match
 let g:airline_theme='solarized'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
+"Not show inset, visual etc. since already done by airline
+set noshowmode
 "remap the escape key to jk 
 inoremap jk <ESC>
 
