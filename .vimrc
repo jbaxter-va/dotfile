@@ -26,7 +26,8 @@ filetype plugin indent on
 set laststatus=2
 
 "change airline theme to match
-let g:airline_theme='solarized'
+" let g:airline_theme='solarized'
+let g:airline_theme='murmur'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
@@ -50,6 +51,10 @@ map <C-t> :TagbarToggle<CR>
 
 "key mapping to toggle NERDtree 
 nmap <C-d> :NERDTreeToggle<CR>
+
+"hold selection
+vnoremap > >gv
+vnoremap < <gv
 
 let mapleader = "\<Space>"
 filetype plugin indent on 
