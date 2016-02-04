@@ -59,6 +59,9 @@ export PATH="/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework
 source $ZSH/oh-my-zsh.sh
 #file for my alias
 source $HOME/.alias
+
+#this allows tmux to show my current directory
+PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
