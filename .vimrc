@@ -17,6 +17,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+"allow for easier swapping
+Plugin 'wesQ3/vim-windowswap'
 
 call vundle#end()
 filetype plugin indent on 
@@ -55,6 +57,15 @@ nmap <C-d> :NERDTreeToggle<CR>
 "hold selection
 vnoremap > >gv
 vnoremap < <gv
+
+"Set paste mode
+nnoremap <leader>v :set paste<cr>"+p:set nopaste<cr>
+
+"Mapping for split swap
+let g:windowswap_map_keys = 0 "prevent default bindings
+nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
+nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
+nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
 
 let mapleader = "\<Space>"
 filetype plugin indent on 

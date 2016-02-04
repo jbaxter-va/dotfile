@@ -1,0 +1,10 @@
+#all of the alias that I used for zsh
+
+alias tux="ssh jab231@tuxworld.usask.ca"
+alias rm="rm -i"
+alias vim="mvim -v"
+#these are shortcuts to my comp sci folders
+alias 434="cd ~/Desktop/CMPT434/Assignments && ls"
+alias 442="cd ~/Desktop/CMPT442 && ls"
+alias 350="cd ~/Desktop/CMPT350/Assignments && ls"
+alias tldr="tldrb"
