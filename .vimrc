@@ -19,6 +19,10 @@ Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 "allow for easier swapping
 Plugin 'wesQ3/vim-windowswap'
+"allows for fzf to be used in vim
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
+
 
 call vundle#end()
 filetype plugin indent on 
@@ -35,6 +39,16 @@ let g:airline_powerline_fonts = 1
 
 "Not show inset, visual etc. since already done by airline
 set noshowmode
+
+"Settings for fzf
+set rtp+=~/.fzf
+nnoremap <leader>r :History<cr>
+nnoremap <leader>j :Buffers<cr>
+nnoremap <leader>d :Tags<cr>
+nnoremap <leader>l :Lines<cr>
+nnoremap <leader>f :GitFiles<cr>
+nnoremap <leader>F :Files<cr>
+
 "remap the escape key to jk 
 inoremap jk <ESC>
 
