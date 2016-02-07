@@ -27,6 +27,7 @@ Plugin 'junegunn/fzf.vim'
 call vundle#end()
 filetype plugin indent on 
 
+"------------- Plugin Configurations -------------
 
 "Make airline bar always appear
 set laststatus=2
@@ -48,6 +49,9 @@ nnoremap <leader>d :Tags<cr>
 nnoremap <leader>l :Lines<cr>
 nnoremap <leader>f :GitFiles<cr>
 nnoremap <leader>F :Files<cr>
+
+
+"------------- Vim Mappings -------------
 
 "remap the escape key to jk 
 inoremap jk <ESC>
@@ -73,13 +77,24 @@ vnoremap > >gv
 vnoremap < <gv
 
 "Set paste mode
-nnoremap <leader>v :set paste<cr>"+p:set nopaste<cr>
+nnoremap <leader>v :set paste<cr> "+p:set nopaste<cr>
 
 "Mapping for split swap
 let g:windowswap_map_keys = 0 "prevent default bindings
 nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
 nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
 nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
+
+"------------- Auto Commands -------------
+
+" auto source .vimrc on change
+	augroup source_vimrc
+	    autocmd!
+	    autocmd BufWritePost .vimrc,_vimrc,vimrc
+		\ source ~/.vimrc | AirlineRefresh
+	augroup END
+
+"------------- Misc. Configurations -------------
 
 let mapleader = "\<Space>"
 filetype plugin indent on 
