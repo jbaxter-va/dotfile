@@ -22,7 +22,8 @@ Plugin 'wesQ3/vim-windowswap'
 "allows for fzf to be used in vim
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
-
+Plugin 'tpope/vim-surround'
+" Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
 filetype plugin indent on 
@@ -99,6 +100,7 @@ nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
 let mapleader = "\<Space>"
 filetype plugin indent on 
 syntax enable
+set autochdir
 set encoding=utf-8
 set number
 set tabstop=4
