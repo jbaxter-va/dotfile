@@ -23,6 +23,7 @@ Plugin 'wesQ3/vim-windowswap'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-surround'
+Plugin 'hdima/python-syntax'
 " Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
@@ -30,6 +31,8 @@ filetype plugin indent on
 
 "------------- Plugin Configurations -------------
 
+"turn on all python highlighting 
+let python_highlight_all = 1
 "Make airline bar always appear
 set laststatus=2
 
@@ -99,10 +102,13 @@ nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
 
 let mapleader = "\<Space>"
 filetype plugin indent on 
-syntax enable
+syntax on
+" wraopping
+set wrap
 set autochdir
 set encoding=utf-8
 set number
+set ruler
 set tabstop=4
 set shiftwidth=4
 set noexpandtab
