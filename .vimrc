@@ -90,6 +90,8 @@ nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
 nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
 
 "------------- Auto Commands -------------
+"set md files to type markdown
+" autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " auto source .vimrc on change
 	augroup source_vimrc
@@ -97,6 +99,13 @@ nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
 	    autocmd BufWritePost .vimrc,_vimrc,vimrc
 		\ source ~/.vimrc | AirlineRefresh
 	augroup END
+
+"automatically line wrap markdown files
+	augroup WrapLineInMarkdownFiles
+		autocmd!
+		autocmd FileType pandoc setlocal textwidth=80
+		autocmd FileType pandoc setlocal fo=t
+	augroup END		
 
 "------------- Misc. Configurations -------------
 
