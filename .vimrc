@@ -24,6 +24,7 @@ Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'hdima/python-syntax'
+Plugin 'davidhalter/jedi-vim'
 " Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
@@ -122,4 +123,5 @@ set tabstop=4
 set shiftwidth=4
 set noexpandtab
 "set background=dark
-colorscheme solarized
+" colorscheme solarized
+colorscheme badwolf
