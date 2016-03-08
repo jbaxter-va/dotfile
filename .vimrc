@@ -11,19 +11,19 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'altercation/vim-colors-solarized'
+"turn on if using solarized!
+" Plugin 'altercation/vim-colors-solarized'
 Plugin 'chilicuil/vim-sml-coursera'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 "allow for easier swapping
-Plugin 'wesQ3/vim-windowswap'
+Plugin 'wesQ4/vim-windowswap'
 "allows for fzf to be used in vim
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-surround'
-Plugin 'hdima/python-syntax'
 Plugin 'davidhalter/jedi-vim'
 " Plugin 'christoomey/vim-tmux-navigator'
 
@@ -107,12 +107,26 @@ nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
 		autocmd FileType pandoc setlocal textwidth=80
 		autocmd FileType pandoc setlocal fo=t
 	augroup END		
+"automatically line wrap Text files
+	augroup WrapLineInTextFiles
+		autocmd!
+		autocmd FileType text setlocal textwidth=80
+		autocmd FileType text setlocal fo=t
+	augroup END		
+
+"Turn off error highlighting in Python files
+	augroup TurnOffErrorHi
+		autocmd!
+		autocmd FileType python hi Error NONE
+	augroup END
 
 "------------- Misc. Configurations -------------
 
 let mapleader = "\<Space>"
 filetype plugin indent on 
 syntax on
+"turn on line cursor
+set cursorline
 " wraopping
 set wrap
 set autochdir
@@ -124,4 +138,5 @@ set shiftwidth=4
 set noexpandtab
 "set background=dark
 " colorscheme solarized
+" colorscheme molokai
 colorscheme badwolf
