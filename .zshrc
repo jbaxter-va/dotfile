@@ -72,6 +72,8 @@ PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -
 #   export EDITOR='mvim'
 # fi
 
+export EDITOR='mvim -v'
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 

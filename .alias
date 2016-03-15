@@ -3,6 +3,7 @@
 alias tux="ssh jab231@tux1.usask.ca"
 alias rm="rm -i"
 alias vim="mvim -v"
+alias vi="mvim -v"
 #these are shortcuts to my comp sci folders
 alias 434="cd ~/Desktop/CMPT434/Assignments && ls"
 alias 442="cd ~/Desktop/CMPT442 && ls"
