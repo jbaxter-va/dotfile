@@ -136,7 +136,11 @@ set ruler
 set tabstop=4
 set shiftwidth=4
 set noexpandtab
-"set background=dark
+set background=dark
 " colorscheme solarized
 " colorscheme molokai
-colorscheme badwolf
+" colorscheme vividchalk
+colorscheme candycode
+" colorscheme monokai
+" let g:rehash256 = 1
+" colorscheme badwolf
