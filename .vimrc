@@ -10,21 +10,24 @@ call vundle#begin()
 " " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-commentary'
+Plugin 'jnurmine/Zenburn'
 Plugin 'vim-pandoc/vim-pandoc'
 "turn on if using solarized!
 " Plugin 'altercation/vim-colors-solarized'
 Plugin 'chilicuil/vim-sml-coursera'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 "allow for easier swapping
-Plugin 'wesQ4/vim-windowswap'
+" Plugin 'wesQ5/vim-windowswap'
 "allows for fzf to be used in vim
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'vim-scripts/indentpython.vim'
 " Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
@@ -120,6 +123,16 @@ nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
 		autocmd FileType python hi Error NONE
 	augroup END
 
+"follow the PEP8 indentation
+au BufNewFile, BufRead *.py
+	\ set tabstop=4
+	\ set softtabstop=4
+	\ set shiftwidth=4
+	\ set textwidth=79
+	\ set expandtab
+	\ set autoindent
+	\ set fileformat=unix
+
 "------------- Misc. Configurations -------------
 
 let mapleader = "\<Space>"
@@ -140,7 +153,9 @@ set background=dark
 " colorscheme solarized
 " colorscheme molokai
 " colorscheme vividchalk
-colorscheme candycode
+colorscheme zenburn
+" go back too 
+" colorscheme candycode
 " colorscheme monokai
 " let g:rehash256 = 1
 " colorscheme badwolf
