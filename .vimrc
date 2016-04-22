@@ -16,12 +16,10 @@ Plugin 'vim-pandoc/vim-pandoc'
 " Plugin 'altercation/vim-colors-solarized'
 Plugin 'chilicuil/vim-sml-coursera'
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-"allow for easier swapping
-" Plugin 'wesQ5/vim-windowswap'
 "allows for fzf to be used in vim
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
@@ -110,11 +108,20 @@ nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
 		autocmd FileType pandoc setlocal textwidth=80
 		autocmd FileType pandoc setlocal fo=t
 	augroup END		
+
 "automatically line wrap Text files
 	augroup WrapLineInTextFiles
 		autocmd!
 		autocmd FileType text setlocal textwidth=80
 		autocmd FileType text setlocal fo=t
+	augroup END		
+	
+"automatically line wrap latex files
+	augroup WrapLineInlaTexFiles
+		autocmd!
+		autocmd FileType tex setlocal textwidth=80
+		autocmd FileType tex setlocal fo=t
+		autocmd FileType tex setlocal spell
 	augroup END		
 
 "Turn off error highlighting in Python files
@@ -150,6 +157,8 @@ set tabstop=4
 set shiftwidth=4
 set noexpandtab
 set background=dark
+
+"------------- Color scheme selections -------------
 " colorscheme solarized
 " colorscheme molokai
 " colorscheme vividchalk
