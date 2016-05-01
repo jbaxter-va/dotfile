@@ -56,7 +56,6 @@ nnoremap <leader>l :Lines<cr>
 nnoremap <leader>f :GitFiles<cr>
 nnoremap <leader>F :Files<cr>
 
-
 "------------- Vim Mappings -------------
 
 "remap the escape key to jk 
@@ -90,6 +89,10 @@ let g:windowswap_map_keys = 0 "prevent default bindings
 nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
 nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
 nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
+
+"Allow for easier buffer switching
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-b> :bprevious<CR>
 
 "------------- Auto Commands -------------
 "set md files to type markdown
