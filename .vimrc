@@ -26,6 +26,8 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'vim-scripts/indentpython.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'fatih/vim-go'
 " Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
@@ -55,6 +57,10 @@ nnoremap <leader>d :Tags<cr>
 nnoremap <leader>l :Lines<cr>
 nnoremap <leader>f :GitFiles<cr>
 nnoremap <leader>F :Files<cr>
+
+"Setting for vim-jedi
+let g:jedi#completions_command = "<C-N>"
+
 
 "------------- Vim Mappings -------------
 

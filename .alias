@@ -1,9 +1,10 @@
 #all of the alias that I used for zsh
 
-alias tux="ssh jab231@tux1.usask.ca"
+alias tux="ssh jab231@tux6.usask.ca"
 alias rm="rm -i"
 alias vim="mvim -v"
 alias vi="mvim -v"
 #these are shortcuts to my comp sci folders
 alias todo="vim ~/Desktop/projects/geektool/todo.txt"
 alias x="exit"
+alias julia="/Applications/Julia-0.4.5.app/Contents/Resources/julia/bin/julia" 
