@@ -13,6 +13,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'jnurmine/Zenburn'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'terryma/vim-multiple-cursors'
 "turn on if using solarized!
 " Plugin 'altercation/vim-colors-solarized'
 Plugin 'chilicuil/vim-sml-coursera'
