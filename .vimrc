@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'jnurmine/Zenburn'
 Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'airblade/vim-gitgutter'
 "turn on if using solarized!
 " Plugin 'altercation/vim-colors-solarized'
 Plugin 'chilicuil/vim-sml-coursera'
@@ -34,6 +35,9 @@ call vundle#end()
 filetype plugin indent on 
 
 "------------- Plugin Configurations -------------
+
+"configure gitgutter
+set updatetime=250
 
 "turn on all python highlighting 
 let python_highlight_all = 1
