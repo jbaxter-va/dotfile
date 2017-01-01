@@ -1,6 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -20,7 +21,7 @@ Plugin 'chilicuil/vim-sml-coursera'
 Plugin 'scrooloose/nerdtree'
 " Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 "allows for fzf to be used in vim
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -30,7 +31,7 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'fatih/vim-go'
-" Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 filetype plugin indent on 
@@ -55,7 +56,7 @@ let g:airline_powerline_fonts = 1
 set noshowmode
 
 "Settings for fzf
-set rtp+=~/.fzf
+set rtp+=/usr/local/opt/fzf
 nnoremap <leader>r :History<cr>
 nnoremap <leader>j :Buffers<cr>
 nnoremap <leader>d :Tags<cr>
@@ -84,6 +85,10 @@ nnoremap <silent> <Up> :resize +1<CR>
 nnoremap <silent> <Down> :resize -1<CR>
 "key mapping for tagbar
 map <C-t> :TagbarToggle<CR>
+
+"Mapping for easier buffer switching
+map bn :bn<cr>
+map bp :bn<cr>
 
 "key mapping to toggle NERDtree 
 nmap <C-d> :NERDTreeToggle<CR>
@@ -157,6 +162,7 @@ au BufNewFile, BufRead *.py
 "------------- Misc. Configurations -------------
 
 let mapleader = "\<Space>"
+set backspace=2
 filetype plugin indent on 
 syntax on
 "turn on line cursor
@@ -171,6 +177,7 @@ set tabstop=4
 set shiftwidth=4
 set noexpandtab
 set background=dark
+" set clipboard=unamed
 
 "------------- Color scheme selections -------------
 " colorscheme solarized
