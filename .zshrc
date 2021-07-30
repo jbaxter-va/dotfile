@@ -78,6 +78,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+#kube-ps1.sh comes from here https://github.com/jonmosco/kube-ps1
 source /Users/jbaxter/kube-ps1.sh
 KUBE_PS1_CONTEXT_ENABLE=false
 KUBE_PS1_SEPARATOR=''
